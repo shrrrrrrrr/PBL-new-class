@@ -1,0 +1,4 @@
+interface:
+  display_name: "PBL 像素课程风格"
+  short_description: "延续现有校园与课程像素视觉，统一关卡、徽章、角色素材及页面交互"
+  default_prompt: "使用 $pbl-pixel-course 为新课程生成素材与前端方案，先读取视觉锚点并复用现有风格规范"

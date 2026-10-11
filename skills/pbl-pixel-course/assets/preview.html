@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PBL 像素课程风格参照</title>
+<link rel="stylesheet" href="pbl-pixel.css">
+<style>
+html { background: #fbf6e8; }
+body { margin: 0; }
+main { max-width: 1440px; margin: auto; }
+h1 { font-size: clamp(26px, 4vw, 44px); margin: 0 0 12px; }
+h2 { font-size: clamp(23px, 3vw, 32px); margin-top: 0; }
+p { margin: 10px 0 18px; }
+section, header { padding: clamp(20px, 4vw, 52px); }
+header { --pbl-scene-image: url("reference/campus-selection.webp"); }
+.header-inner { max-width: 800px; }
+.reference-nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.chip { padding: 4px 10px; border: 2px solid #4d6f99; background: #fbf6e8; color: #132a49; }
+.token-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.token { border: 2px solid #132a49; padding: 8px; min-width: 100px; background: #fbf6e8; }
+.swatch { display: block; height: 32px; background: var(--swatch); margin-bottom: 5px; }
+.map-demo { position: relative; padding: 20px 12px; isolation: isolate; overflow: hidden; background: #0a193b; border: 3px solid #4d6f99; }
+.map-demo::before { content: ""; position: absolute; inset: 0; background: url("reference/voyage-map.webp") center/cover; opacity: .65; z-index: -1; image-rendering: pixelated; }
+.map-grid { position: relative; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: start; gap: 30px; }
+.map-grid .level-button:nth-child(2) { margin-top: 62px; }
+.map-route { position: absolute; top: 55px; left: 0; width: 100%; height: 260px; pointer-events: none; }
+.map-route path { stroke: #ffd276; stroke-width: 4; stroke-dasharray: 9 8; fill: none; }
+.asset-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 220px),1fr)); gap: 18px; }
+.asset-card { min-width: 0; border: 2px solid #4d6f99; padding: 12px; background: #10274c; color: #edf4ff; display: flex; flex-direction: column; }
+.asset-card figure { margin: 0 0 10px; height: 192px; display: grid; place-items: center; background-color: #182f4b; }
+.asset-card img { max-height: 192px; max-width: 100%; }
+.asset-card .pixel-button { margin-top: auto; }
+.asset-caption { overflow-wrap: anywhere; font-size: 17px; margin-bottom: 10px; }
+.asset-caption small { display: block; font-size: 14px; }
+.dialog-image { display: block; max-height: 40dvh; max-width: 100%; margin: 12px auto; }
+.dialog-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.copy-example { max-width: 720px; margin: 20px 0; }
+footer { padding: 20px; text-align: center; border-top: 3px solid #132a49; }
+@media(max-width: 600px) {
+  .map-grid { grid-template-columns: 1fr; gap: 28px; }
+  .map-grid .level-button:nth-child(2) { margin-top: 0; }
+  .map-route { display: none; }
+  .map-grid::before { content: ""; position: absolute; top: 10%; bottom: 15%; left: 50%; border-left: 4px dashed #ffd276; z-index: -1; }
+  .map-grid .level-button { max-width: 280px; margin: auto; }
+  .asset-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .asset-card { padding: 8px; }
+  .asset-card figure { height: 145px; }
+  .asset-card img { max-height: 145px; }
+  .asset-card .pixel-button { padding-inline: 8px; font-size: 15px; }
+}
+</style>
+</head>
+<body class="pbl-style">
+<main>
+<header class="scene">
+<div class="panel header-inner">
+<p>PBL · 风格版本 1.0.0</p>
+<h1>课程可以不同，画风保持一致</h1>
+<p>平台外层使用北航校园像素场景，课程内部使用各自主题，以下为已交付图案与独立样式参照，不含教学业务服务</p>
+<nav class="reference-nav" aria-label="参照导航">
+<a class="pixel-button primary" href="#map">关卡与交互</a>
+<a class="pixel-button" href="#references">29 张视觉锚点</a>
+<a class="pixel-button" href="../SKILL.md">阅读 Skill</a>
+</nav>
+</div>
+</header>
+<section aria-labelledby="tokens-title">
+<h2 id="tokens-title">共同字体、色彩与阅读层</h2>
+<p>真实寒蝉团圆体 Round · weight 500 · 禁止合成粗斜体</p>
+<div class="token-row">
+<div class="token"><i class="swatch" style="--swatch:#132a49"></i>海军蓝<br>#132a49</div>
+<div class="token"><i class="swatch" style="--swatch:#245eb7"></i>校园蓝<br>#245eb7</div>
+<div class="token"><i class="swatch" style="--swatch:#fbf6e8"></i>奶油<br>#fbf6e8</div>
+<div class="token"><i class="swatch" style="--swatch:#087f80"></i>主操作<br>#087f80</div>
+<div class="token"><i class="swatch" style="--swatch:#ffd276"></i>当前节点<br>#ffd276</div>
+<div class="token"><i class="swatch" style="--swatch:#baf6ff"></i>选中<br>#baf6ff</div>
+</div>
+<div class="panel copy-example">
+<h3>背景透明，文字清楚</h3>
+<p>阅读和表单保留稳定底色，背景图单独调透明度，教师填写的教材与系统文案分别管理</p>
+<div class="reference-nav"><button class="pixel-button primary" data-demo>主要操作</button><button class="pixel-button" data-demo>次要操作</button><button class="pixel-button" disabled>不可操作</button></div>
+</div>
+</section>
+<section id="map" class="space-panel" aria-labelledby="map-title">
+<h2 id="map-title">同一套关卡语言，真实课时主题</h2>
+<p>平台比例、视角与光源一致，题材分别为 VR 参观、滑翔机理论、滑翔机实践，整图点击打开中央详情</p>
+<div class="map-demo">
+<svg class="map-route" viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true"><path d="M 166 85 C 300 85 365 180 500 180 S 700 85 834 85"/></svg>
+<div class="map-grid">
+<button class="level-button" aria-current="step" data-level="VR 实验室参观" data-badge="badge-vr">
+<span class="level-visual"><img class="pixel-art" src="reference/level-vr.webp" alt="VR 头显与实验平台" width="384" height="384"><span class="current-sprite" style="--landing-y:70%"><img class="pixel-art" src="reference/astronaut.webp" alt="当前学习位置" width="192" height="192"></span></span>
+<span class="level-label">01 · VR 实验室参观</span>
+</button>
+<button class="level-button" data-level="滑翔机理论" data-badge="badge-theory">
+<span class="level-visual"><img class="pixel-art" src="reference/level-theory.webp" alt="机翼研究平台" width="384" height="384"></span>
+<span class="level-label">02 · 滑翔机理论</span>
+</button>
+<button class="level-button" data-level="滑翔机试飞" data-badge="badge-glider">
+<span class="level-visual"><img class="pixel-art" src="reference/level-glider.webp" alt="滑翔机与试飞平台" width="384" height="384"></span>
+<span class="level-label">03 · 滑翔机试飞</span>
+</button>
+</div>
+</div>
+<p>这里只演示风格，真实课时顺序、进度、解锁和获章条件必须读取现有业务数据</p>
+</section>
+<section id="references" aria-labelledby="references-title">
+<h2 id="references-title">最终视觉锚点</h2>
+<p>先查看同类图片，再校准新素材，已获徽章彩色、未获徽章灰度由页面控制</p>
+<div class="asset-grid">
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/campus-selection.webp" alt="campus-selection" width="960" height="540"></figure><div class="asset-caption">campus-selection<small>platform-scene · 960 × 540</small></div><button class="pixel-button" data-reference="campus-selection" data-path="reference/campus-selection.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/campus-personal.webp" alt="campus-personal" width="960" height="540"></figure><div class="asset-caption">campus-personal<small>platform-scene · 960 × 540</small></div><button class="pixel-button" data-reference="campus-personal" data-path="reference/campus-personal.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/login-desktop.webp" alt="login-desktop" width="960" height="540"></figure><div class="asset-caption">login-desktop<small>platform-scene · 960 × 540</small></div><button class="pixel-button" data-reference="login-desktop" data-path="reference/login-desktop.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/login-mobile.webp" alt="login-mobile" width="960" height="1706"></figure><div class="asset-caption">login-mobile<small>platform-scene · 960 × 1706</small></div><button class="pixel-button" data-reference="login-mobile" data-path="reference/login-mobile.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/voyage-map.webp" alt="voyage-map" width="960" height="640"></figure><div class="asset-caption">voyage-map<small>course-scene · 960 × 640</small></div><button class="pixel-button" data-reference="voyage-map" data-path="reference/voyage-map.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/voyage-vertical.webp" alt="voyage-vertical" width="960" height="1440"></figure><div class="asset-caption">voyage-vertical<small>course-scene · 960 × 1440</small></div><button class="pixel-button" data-reference="voyage-vertical" data-path="reference/voyage-vertical.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/voyage-reading.webp" alt="voyage-reading" width="960" height="540"></figure><div class="asset-caption">voyage-reading<small>course-scene · 960 × 540</small></div><button class="pixel-button" data-reference="voyage-reading" data-path="reference/voyage-reading.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/voyage-lab.webp" alt="voyage-lab" width="960" height="540"></figure><div class="asset-caption">voyage-lab<small>course-scene · 960 × 540</small></div><button class="pixel-button" data-reference="voyage-lab" data-path="reference/voyage-lab.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/glider-cover.webp" alt="glider-cover" width="960" height="1440"></figure><div class="asset-caption">glider-cover<small>experiment-cover · 960 × 1440</small></div><button class="pixel-button" data-reference="glider-cover" data-path="reference/glider-cover.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/level-vr.webp" alt="level-vr" width="384" height="384"></figure><div class="asset-caption">level-vr<small>level-sprite · 384 × 384</small></div><button class="pixel-button" data-reference="level-vr" data-path="reference/level-vr.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/level-theory.webp" alt="level-theory" width="384" height="384"></figure><div class="asset-caption">level-theory<small>level-sprite · 384 × 384</small></div><button class="pixel-button" data-reference="level-theory" data-path="reference/level-theory.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/level-glider.webp" alt="level-glider" width="384" height="384"></figure><div class="asset-caption">level-glider<small>level-sprite · 384 × 384</small></div><button class="pixel-button" data-reference="level-glider" data-path="reference/level-glider.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/level-unknown.webp" alt="level-unknown" width="384" height="384"></figure><div class="asset-caption">level-unknown<small>level-sprite · 384 × 384</small></div><button class="pixel-button" data-reference="level-unknown" data-path="reference/level-unknown.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/astronaut.webp" alt="astronaut" width="192" height="192"></figure><div class="asset-caption">astronaut<small>character-sprite · 192 × 192</small></div><button class="pixel-button" data-reference="astronaut" data-path="reference/astronaut.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/robot-wink.webp" alt="robot-wink" width="192" height="192"></figure><div class="asset-caption">robot-wink<small>assistant-sprite · 192 × 192</small></div><button class="pixel-button" data-reference="robot-wink" data-path="reference/robot-wink.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/ship.webp" alt="ship" width="384" height="256"></figure><div class="asset-caption">ship<small>course-logo · 384 × 256</small></div><button class="pixel-button" data-reference="ship" data-path="reference/ship.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/badge-vr.webp" alt="badge-vr" width="192" height="192"></figure><div class="asset-caption">badge-vr<small>badge-sprite · 192 × 192</small></div><button class="pixel-button" data-reference="badge-vr" data-path="reference/badge-vr.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/badge-theory.webp" alt="badge-theory" width="192" height="192"></figure><div class="asset-caption">badge-theory<small>badge-sprite · 192 × 192</small></div><button class="pixel-button" data-reference="badge-theory" data-path="reference/badge-theory.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/badge-glider.webp" alt="badge-glider" width="192" height="192"></figure><div class="asset-caption">badge-glider<small>badge-sprite · 192 × 192</small></div><button class="pixel-button" data-reference="badge-glider" data-path="reference/badge-glider.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/badge-room.webp" alt="badge-room" width="768" height="512"></figure><div class="asset-caption">badge-room<small>platform-scene · 768 × 512</small></div><button class="pixel-button" data-reference="badge-room" data-path="reference/badge-room.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/account-pilot.webp" alt="account-pilot" width="192" height="192"></figure><div class="asset-caption">account-pilot<small>account-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="account-pilot" data-path="reference/account-pilot.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/account-book.webp" alt="account-book" width="192" height="192"></figure><div class="asset-caption">account-book<small>account-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="account-book" data-path="reference/account-book.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/account-ginkgo.webp" alt="account-ginkgo" width="192" height="192"></figure><div class="asset-caption">account-ginkgo<small>account-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="account-ginkgo" data-path="reference/account-ginkgo.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/avatar-navigator.webp" alt="avatar-navigator" width="192" height="192"></figure><div class="asset-caption">avatar-navigator<small>course-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="avatar-navigator" data-path="reference/avatar-navigator.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/avatar-pathfinder.webp" alt="avatar-pathfinder" width="192" height="192"></figure><div class="asset-caption">avatar-pathfinder<small>course-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="avatar-pathfinder" data-path="reference/avatar-pathfinder.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/avatar-maker.webp" alt="avatar-maker" width="192" height="192"></figure><div class="asset-caption">avatar-maker<small>course-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="avatar-maker" data-path="reference/avatar-maker.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/avatar-decoder.webp" alt="avatar-decoder" width="192" height="192"></figure><div class="asset-caption">avatar-decoder<small>course-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="avatar-decoder" data-path="reference/avatar-decoder.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/avatar-collaborator.webp" alt="avatar-collaborator" width="192" height="192"></figure><div class="asset-caption">avatar-collaborator<small>course-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="avatar-collaborator" data-path="reference/avatar-collaborator.webp">查看图案</button></article>
+<article class="asset-card"><figure><img class="pixel-art" loading="lazy" src="reference/avatar-guardian.webp" alt="avatar-guardian" width="192" height="192"></figure><div class="asset-caption">avatar-guardian<small>course-avatar · 192 × 192</small></div><button class="pixel-button" data-reference="avatar-guardian" data-path="reference/avatar-guardian.webp">查看图案</button></article>
+</div>
+</section>
+<footer>来源基线 17099fe · 只读参照 · 生图模型未记录具体版本</footer>
+</main>
+<dialog class="pixel-dialog" id="details" aria-labelledby="dialog-title">
+<h2 id="dialog-title">详情</h2>
+<img id="dialog-image" class="pixel-art dialog-image" alt="">
+<p id="dialog-description"></p>
+<div class="dialog-actions"><button class="pixel-button primary" id="dialog-close">关闭</button></div>
+</dialog>
+<script>
+(function () {
+  var grid = document.querySelector(".map-grid");
+  var route = document.querySelector(".map-route");
+  function syncRoute() {
+    if (!route.clientWidth) return;
+    var rect = route.getBoundingClientRect();
+    var points = Array.from(grid.querySelectorAll(".level-button")).map(function(button, index) {
+      var visual = button.querySelector(".level-visual");
+      var stable = button.getBoundingClientRect();
+      return {
+        x: (stable.left + visual.offsetLeft + visual.offsetWidth * .5 - rect.left) / rect.width * 1000,
+        y: (stable.top + visual.offsetTop + visual.offsetHeight * (index === 2 ? .65 : .7) - rect.top) / rect.height * 260
+      };
+    });
+    var d = "M " + points[0].x + " " + points[0].y;
+    for (var i = 1; i < points.length; i++) {
+      var a = points[i - 1], b = points[i], mid = (a.x + b.x) / 2;
+      d += " C " + mid + " " + a.y + " " + mid + " " + b.y + " " + b.x + " " + b.y;
+    }
+    route.querySelector("path").setAttribute("d", d);
+  }
+  new ResizeObserver(syncRoute).observe(grid);
+  document.fonts.ready.then(syncRoute);
+  grid.querySelectorAll("img").forEach(function(image) { image.addEventListener("load", syncRoute); });
+  var dialog = document.getElementById("details");
+  var title = document.getElementById("dialog-title");
+  var picture = document.getElementById("dialog-image");
+  var description = document.getElementById("dialog-description");
+  function open(titleText, imagePath, copy) {
+    title.textContent = titleText;
+    picture.hidden = !imagePath;
+    if (imagePath) { picture.src = imagePath; picture.alt = titleText; }
+    description.textContent = copy;
+    dialog.showModal();
+  }
+  document.querySelectorAll("[data-level]").forEach(function(button) {
+    button.addEventListener("click", function() {
+      open(button.dataset.level, "reference/" + button.dataset.badge + ".webp",
+        "详情采用中央弹窗，徽章是与课时主题一致的独立图案，本预览不执行通关或发奖");
+    });
+  });
+  document.querySelectorAll("[data-reference]").forEach(function(button) {
+    button.addEventListener("click", function() {
+      open(button.dataset.reference, button.dataset.path,
+        "与最终已验收素材按实际显示尺寸对照，来源与散列见 reference-manifest.json");
+    });
+  });
+  document.querySelectorAll("[data-demo]").forEach(function(button) {
+    button.addEventListener("click", function() {
+      open("按钮状态参照", "", "鼠标悬浮轻微弹起放大，按下回落，键盘有焦点提示，减少运动时不位移缩放");
+    });
+  });
+  document.getElementById("dialog-close").addEventListener("click", function() { dialog.close(); });
+  dialog.addEventListener("click", function(event) {
+    var rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right ||
+        event.clientY < rect.top || event.clientY > rect.bottom) { dialog.close(); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "styleVersion": "1.0.0",
+  "courseId": null,
+  "note": "Copy this file next to your new asset directory; fill the real paths, sizes and SHA256. null means unknown, not verified.",
+  "assets": [
+    {
+      "id": "new-lesson-01",
+      "kind": "level-sprite",
+      "scope": "course",
+      "referenceIds": [
+        "level-theory",
+        "level-glider"
+      ],
+      "generation": {
+        "tool": null,
+        "model": null,
+        "prompt": "",
+        "approvedBy": null
+      },
+      "landingAnchor": {
+        "x": 0.5,
+        "y": 0.7,
+        "note": "measure on actual new sprite; these values are an example"
+      },
+      "files": [
+        {
+          "role": "master",
+          "path": "new-assets/lesson-01-master.png",
+          "width": 1024,
+          "height": 1024,
+          "alphaRequired": true,
+          "sha256": null
+        },
+        {
+          "role": "published",
+          "path": "new-assets/lesson-01-384.webp",
+          "width": 384,
+          "height": 384,
+          "alphaRequired": true,
+          "sha256": null
+        },
+        {
+          "role": "published",
+          "path": "new-assets/lesson-01-192.webp",
+          "width": 192,
+          "height": 192,
+          "alphaRequired": true,
+          "sha256": null
+        }
+      ],
+      "manualChecks": {
+        "apparentPixelSize": null,
+        "silhouette": null,
+        "angleAndLighting": null,
+        "readableAtDisplaySize": null,
+        "realTransparency": null
+      }
+    }
+  ]
+}

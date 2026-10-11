@@ -1,0 +1,114 @@
+/* Standalone reference tokens/components. Map onto the host UI; do not override its business logic. */
+@font-face {
+  font-family: ChillReunion;
+  src: url("fonts/ChillReunion-Round.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.pbl-style {
+  --pbl-navy: #132a49;
+  --pbl-blue: #245eb7;
+  --pbl-cream: #fbf6e8;
+  --pbl-teal: #087f80;
+  --pbl-gold: #ffd276;
+  --pbl-cyan: #baf6ff;
+  --pbl-space: #0a193b;
+  --pbl-space-panel: #10274c;
+  --pbl-space-text: #edf4ff;
+  --pbl-scene-alpha: .34;
+  --pbl-panel-alpha: .9;
+  font-family: ChillReunion, "Microsoft YaHei", sans-serif;
+  font-weight: 500;
+  font-synthesis: none;
+  color: var(--pbl-navy);
+  line-height: 1.6;
+}
+.pbl-style *, .pbl-style *::before, .pbl-style *::after { box-sizing: border-box; }
+.pbl-style h1, .pbl-style h2, .pbl-style h3, .pbl-style strong { font-weight: 500; }
+.pbl-style button, .pbl-style input, .pbl-style textarea { font: inherit; font-synthesis: none; }
+.pbl-style img { max-width: 100%; height: auto; }
+.pbl-style .pixel-art { image-rendering: pixelated; object-fit: contain; }
+.pbl-style .scene {
+  position: relative; isolation: isolate;
+  background: var(--pbl-cream);
+}
+.pbl-style .scene::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: var(--pbl-scene-image);
+  background-size: cover; background-position: center;
+  image-rendering: pixelated; opacity: var(--pbl-scene-alpha);
+}
+.pbl-style .panel {
+  border: 3px solid var(--pbl-navy);
+  background: rgba(251, 246, 232, var(--pbl-panel-alpha));
+  box-shadow: 4px 4px 0 rgba(19, 42, 73, .3);
+  padding: clamp(16px, 3vw, 32px);
+}
+.pbl-style .pixel-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 44px; padding: 8px 18px; border: 3px solid var(--pbl-navy);
+  border-radius: 0; color: var(--pbl-navy); background: var(--pbl-cream);
+  box-shadow: 0 4px 0 var(--pbl-navy); text-decoration: none; cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.pbl-style .pixel-button.primary { background: var(--pbl-teal); color: var(--pbl-cream); }
+.pbl-style .pixel-button:focus-visible, .pbl-style .level-button:focus-visible {
+  outline: 3px solid var(--pbl-gold); outline-offset: 5px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .pbl-style .pixel-button:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]):hover {
+    transform: translateY(-2px) scale(1.025);
+  }
+  .pbl-style .level-button:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]):hover .level-visual {
+    transform: translateY(-3px) scale(1.025);
+  }
+}
+.pbl-style .pixel-button:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]):active {
+  transform: translateY(1px) scale(.98); box-shadow: 0 1px 0 var(--pbl-navy);
+}
+.pbl-style .pixel-button:is(:disabled, [aria-disabled="true"], [aria-busy="true"]) {
+  opacity: .6; cursor: default;
+}
+.pbl-style .level-button {
+  display: block; position: relative; width: 100%; padding: 6px;
+  color: var(--pbl-space-text); background: transparent;
+  border: 0; cursor: pointer; text-align: center; min-height: 44px;
+}
+.pbl-style .level-visual {
+  display: block; position: relative; max-width: 220px; margin: auto;
+  transition: transform 150ms ease;
+}
+.pbl-style .level-button:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]):active .level-visual { transform: translateY(1px) scale(.98); }
+.pbl-style .level-button:disabled { cursor: default; }
+.pbl-style .level-button:disabled .level-visual { transform: none; }
+.pbl-style .level-visual > img { width: 100%; display: block; }
+.pbl-style .current-sprite {
+  position: absolute; left: var(--landing-x, 50%); top: var(--landing-y, 70%);
+  width: 30%; transform: translate(-50%, -100%); pointer-events: none;
+}
+.pbl-style .current-sprite > img { width: 100%; display: block; }
+.pbl-style .level-label {
+  display: block; padding: 8px; border: 2px solid #4d6f99;
+  color: var(--pbl-navy); background: #edf4ff; font-size: 18px;
+}
+.pbl-style .level-button[aria-current="step"] .level-label {
+  border-color: #46b8ca; background: var(--pbl-cyan);
+}
+.pbl-style .space-panel { color: var(--pbl-space-text); background: var(--pbl-space); }
+.pbl-style .badge-locked { filter: grayscale(1); }
+.pbl-style .pixel-dialog {
+  color: var(--pbl-navy); background: var(--pbl-cream);
+  border: 3px solid var(--pbl-navy); padding: 24px;
+  width: min(540px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); overflow: auto;
+  font: inherit; font-synthesis: none;
+  box-shadow: 6px 6px 0 #132a4966;
+}
+.pbl-style .pixel-dialog::backdrop { background: #061229b8; }
+@media (prefers-reduced-motion: reduce) {
+  .pbl-style .pixel-button, .pbl-style .level-visual { transition: none; }
+  .pbl-style .pixel-button:not(:disabled):hover,
+  .pbl-style .pixel-button:not(:disabled):active,
+  .pbl-style .level-button:hover .level-visual,
+  .pbl-style .level-button:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]):active .level-visual { transform: none !important; }
+}

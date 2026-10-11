@@ -1,0 +1,84 @@
+{
+  "styleVersion": "1.0.0",
+  "courseId": null,
+  "title": "",
+  "audience": "初一学生",
+  "theme": {
+    "subject": "",
+    "setting": "",
+    "motifs": [],
+    "accentColors": [],
+    "referenceIds": [
+      "level-vr",
+      "level-theory",
+      "level-glider",
+      "badge-theory"
+    ],
+    "light": "upper-left",
+    "perspective": "isometric 3/4"
+  },
+  "sharedPlatform": {
+    "campusTheme": "Beihang pixel campus",
+    "font": "ChillReunion Round 500",
+    "robot": "reuse robot-wink",
+    "accountBadgesAndCoins": "account scoped; do not change rules"
+  },
+  "lessons": [
+    {
+      "id": null,
+      "order": 1,
+      "title": "",
+      "teachingSubject": "",
+      "distinctiveObject": "",
+      "supportingObjects": [],
+      "requiredAssets": [
+        "level-sprite",
+        "badge"
+      ],
+      "contentStatus": "awaiting teacher content",
+      "completionRule": "reuse existing backend rule"
+    }
+  ],
+  "pages": [
+    "course-map",
+    "lesson",
+    "course-lab",
+    "course-archive"
+  ],
+  "assetsNeeded": [
+    "cover",
+    "map-desktop",
+    "map-mobile",
+    "sidebar",
+    "reading-header",
+    "lab-cover",
+    "lesson-sprites",
+    "lesson-badges"
+  ],
+  "characters": {
+    "useExistingSix": null,
+    "currentPositionSprite": "",
+    "avatarScope": "course",
+    "accountAvatar": "keep separate"
+  },
+  "generation": {
+    "tool": null,
+    "model": null,
+    "canUseReferenceImages": null,
+    "canOutputTransparency": null,
+    "approvedSamples": []
+  },
+  "acceptance": {
+    "widths": [
+      1920,
+      1440,
+      1024,
+      768,
+      390,
+      360
+    ],
+    "checkShortScreenAndLandscape": true,
+    "preserveHumanCopy": true,
+    "noNewPermissionsOrRewards": true
+  }
+}

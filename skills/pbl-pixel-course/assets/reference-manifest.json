@@ -1,0 +1,395 @@
+{
+  "styleVersion": "1.0.0",
+  "sourceRepository": "https://github.com/shrrrrrrrr/web-frontend-test",
+  "sourceRevision": "17099fe9d24f0e7827293c690bafd84f9635b50c",
+  "generationProvenance": "Project records identify built-in image_gen. Exact image model/version was not recorded.",
+  "referencePolicy": "Byte-for-byte published derivatives; no recoloring or image generation in this packaging. References freeze appearance, not a requirement that every new course reuse the same subject.",
+  "assets": [
+    {
+      "id": "campus-selection",
+      "kind": "platform-scene",
+      "path": "assets/reference/campus-selection.webp",
+      "width": 960,
+      "height": 540,
+      "alphaExtrema": null,
+      "bytes": 738798,
+      "sha256": "773a70f7da54fdfe0fe10addbb10289b0c311de11efd6f9979768daa47b12c56",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/campus-select-960.webp"
+    },
+    {
+      "id": "campus-personal",
+      "kind": "platform-scene",
+      "path": "assets/reference/campus-personal.webp",
+      "width": 960,
+      "height": 540,
+      "alphaExtrema": null,
+      "bytes": 787376,
+      "sha256": "58cb376b9af68dc376d4c5876b7b2803c8315931f115f74a4e419517493bbfe3",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/campus-personal-960.webp"
+    },
+    {
+      "id": "login-desktop",
+      "kind": "platform-scene",
+      "path": "assets/reference/login-desktop.webp",
+      "width": 960,
+      "height": 540,
+      "alphaExtrema": null,
+      "bytes": 523262,
+      "sha256": "bcb4f6ead02be223103b103e2c04c5dc07f1b5c92cc3587390b06249deab885c",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/login-desktop-960.webp"
+    },
+    {
+      "id": "login-mobile",
+      "kind": "platform-scene",
+      "path": "assets/reference/login-mobile.webp",
+      "width": 960,
+      "height": 1706,
+      "alphaExtrema": null,
+      "bytes": 1532282,
+      "sha256": "706899dbb870258a20c0968ce4d68108fb068573ff194e56bfafaa59c6333d96",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/login-mobile-960.webp"
+    },
+    {
+      "id": "voyage-map",
+      "kind": "course-scene",
+      "path": "assets/reference/voyage-map.webp",
+      "width": 960,
+      "height": 640,
+      "alphaExtrema": null,
+      "bytes": 551622,
+      "sha256": "906b0eb2030d90c2406158853c9fb787d5acabb50cbcd35197612832d9fb0ca2",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/cosmos-960.webp"
+    },
+    {
+      "id": "voyage-vertical",
+      "kind": "course-scene",
+      "path": "assets/reference/voyage-vertical.webp",
+      "width": 960,
+      "height": 1440,
+      "alphaExtrema": null,
+      "bytes": 1066374,
+      "sha256": "18fcb2e8de746868ad61e709c1795822b9ef6ce09236e7d756fb800b8e35bb02",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/vertical-960.webp"
+    },
+    {
+      "id": "voyage-reading",
+      "kind": "course-scene",
+      "path": "assets/reference/voyage-reading.webp",
+      "width": 960,
+      "height": 540,
+      "alphaExtrema": null,
+      "bytes": 388422,
+      "sha256": "54a570a9d97f0d05c0042336cdb39db9d83e872f23f7e38c0bbcc94e2adb0d12",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/voyage-reading-960.webp"
+    },
+    {
+      "id": "voyage-lab",
+      "kind": "course-scene",
+      "path": "assets/reference/voyage-lab.webp",
+      "width": 960,
+      "height": 540,
+      "alphaExtrema": null,
+      "bytes": 409858,
+      "sha256": "0c2b7c76791331ca102f17a917ec8a27839726be1014e24445de72561940e3d8",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/voyage-lab-960.webp"
+    },
+    {
+      "id": "glider-cover",
+      "kind": "experiment-cover",
+      "path": "assets/reference/glider-cover.webp",
+      "width": 960,
+      "height": 1440,
+      "alphaExtrema": null,
+      "bytes": 988606,
+      "sha256": "910d5e08e76437b9e07fbfe360162c65648722db3511c64c468d14f531a96dba",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/glider-cover-960.webp"
+    },
+    {
+      "id": "level-vr",
+      "kind": "level-sprite",
+      "path": "assets/reference/level-vr.webp",
+      "width": 384,
+      "height": 384,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 119790,
+      "sha256": "b7ded5298b4430d03f9f8df183aa5b91f014b0c312ee3369b46143b414435fca",
+      "sourcePath": "frontend/public/assets/experience-patch/vr-384.webp"
+    },
+    {
+      "id": "level-theory",
+      "kind": "level-sprite",
+      "path": "assets/reference/level-theory.webp",
+      "width": 384,
+      "height": 384,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 136100,
+      "sha256": "8c899b1524ebbd9d264cea9c4edafc8e5a39e1fe586ed6387235a39c8547fa4b",
+      "sourcePath": "frontend/public/assets/experience-patch/theory-384.webp"
+    },
+    {
+      "id": "level-glider",
+      "kind": "level-sprite",
+      "path": "assets/reference/level-glider.webp",
+      "width": 384,
+      "height": 384,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 108464,
+      "sha256": "70f340912e692ec5691795a01479070c7167fff0e3910b8002d4324de857cc7d",
+      "sourcePath": "frontend/public/assets/experience-patch/experiment-384.webp"
+    },
+    {
+      "id": "level-unknown",
+      "kind": "level-sprite",
+      "path": "assets/reference/level-unknown.webp",
+      "width": 384,
+      "height": 384,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 54770,
+      "sha256": "7d69b5805e93913127fcd69857efd7920bd87daa458988b6e67f895f854f53e2",
+      "sourcePath": "frontend/public/assets/next-version/step-01/web/unknown-platform-384.webp"
+    },
+    {
+      "id": "astronaut",
+      "kind": "character-sprite",
+      "path": "assets/reference/astronaut.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 17240,
+      "sha256": "e1b63a2488047cfbafe8333ca83951a8ef35c778b2531d181524b737fb3fedc1",
+      "sourcePath": "frontend/public/assets/next-version/step-01/web/astronaut-192.webp"
+    },
+    {
+      "id": "robot-wink",
+      "kind": "assistant-sprite",
+      "path": "assets/reference/robot-wink.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 14970,
+      "sha256": "1d51b167b71b01f490e3994b2cd4c05c9214f2bf3ac468b3f6e35002b86ea9b9",
+      "sourcePath": "frontend/public/assets/redesign-v2/visual-patch/web/robot-wink-192.webp"
+    },
+    {
+      "id": "ship",
+      "kind": "course-logo",
+      "path": "assets/reference/ship.webp",
+      "width": 384,
+      "height": 256,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bytes": 44754,
+      "sha256": "f8a36f697caff2ac21567808b0f253527d0851bc5599b13baceb40ef431a9ff0",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/ship-384.webp"
+    },
+    {
+      "id": "badge-vr",
+      "kind": "badge-sprite",
+      "path": "assets/reference/badge-vr.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 21714,
+      "sha256": "c94eaa5dda763224916aefb3e18e51d7f297c76b6fbae5fd3523ebd8da3a3271",
+      "sourcePath": "frontend/public/assets/next-rewards/vr-192.webp"
+    },
+    {
+      "id": "badge-theory",
+      "kind": "badge-sprite",
+      "path": "assets/reference/badge-theory.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 19846,
+      "sha256": "552c9acb879a67e335c61f4eef2346c492caa653babf3684fc08e67b32288678",
+      "sourcePath": "frontend/public/assets/next-rewards/theory-192.webp"
+    },
+    {
+      "id": "badge-glider",
+      "kind": "badge-sprite",
+      "path": "assets/reference/badge-glider.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 23598,
+      "sha256": "8074f26822c7e0d4e06f7f776c11fd2968394f90737dd6663aac60d87bfb4523",
+      "sourcePath": "frontend/public/assets/next-rewards/glider-192.webp"
+    },
+    {
+      "id": "badge-room",
+      "kind": "platform-scene",
+      "path": "assets/reference/badge-room.webp",
+      "width": 768,
+      "height": 512,
+      "alphaExtrema": null,
+      "bytes": 278992,
+      "sha256": "1a496c12bbd7b24b7e84df7ba11038f34146c57b8eea8169fa3c2fc20f725f38",
+      "sourcePath": "frontend/public/assets/badge-room/room-768.webp"
+    },
+    {
+      "id": "account-pilot",
+      "kind": "account-avatar",
+      "path": "assets/reference/account-pilot.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 20444,
+      "sha256": "2b191fb1f8d0cc7a0aeaf80e679b346b72c5fedf802275349fc8d9e753173790",
+      "sourcePath": "frontend/public/assets/next-version/step-01/web/account-pilot-192.webp"
+    },
+    {
+      "id": "account-book",
+      "kind": "account-avatar",
+      "path": "assets/reference/account-book.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 19184,
+      "sha256": "de1e2a45e60e36852255b4c1e22bc2addd6293c3a08d2b54a8120050c098f891",
+      "sourcePath": "frontend/public/assets/next-version/step-01/web/account-book-192.webp"
+    },
+    {
+      "id": "account-ginkgo",
+      "kind": "account-avatar",
+      "path": "assets/reference/account-ginkgo.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 14898,
+      "sha256": "c1f1e83a2112adc0ef2eeb4005ac42cc10e3d52249378c7896f85b807e9eadd8",
+      "sourcePath": "frontend/public/assets/next-version/step-01/web/account-ginkgo-192.webp"
+    },
+    {
+      "id": "avatar-navigator",
+      "kind": "course-avatar",
+      "path": "assets/reference/avatar-navigator.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 54514,
+      "sha256": "cef5e8d58c1a5b989827da7d987a0aada783aa7454422d36b461d816f3846efd",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/avatar-navigator-192.webp"
+    },
+    {
+      "id": "avatar-pathfinder",
+      "kind": "course-avatar",
+      "path": "assets/reference/avatar-pathfinder.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 43290,
+      "sha256": "72c4f8f1f2f2ffbd5dc60a901ea30f65783a610c240c387046b13c4b370da59d",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/avatar-pathfinder-192.webp"
+    },
+    {
+      "id": "avatar-maker",
+      "kind": "course-avatar",
+      "path": "assets/reference/avatar-maker.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 44460,
+      "sha256": "9f0e56c44309269c4116a73317af3ed715b73551669208f13dad616748022770",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/avatar-maker-192.webp"
+    },
+    {
+      "id": "avatar-decoder",
+      "kind": "course-avatar",
+      "path": "assets/reference/avatar-decoder.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 43064,
+      "sha256": "bf15cf13d7cec3d6cf2136c45a77111e079dce0b577b7210fe25ab87cf34deb2",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/avatar-decoder-192.webp"
+    },
+    {
+      "id": "avatar-collaborator",
+      "kind": "course-avatar",
+      "path": "assets/reference/avatar-collaborator.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 47378,
+      "sha256": "0a925793d0c9b42d8d9337898748e276700df6b2f31e59a10993871c31c1298d",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/avatar-collaborator-192.webp"
+    },
+    {
+      "id": "avatar-guardian",
+      "kind": "course-avatar",
+      "path": "assets/reference/avatar-guardian.webp",
+      "width": 192,
+      "height": 192,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bytes": 42328,
+      "sha256": "98c4b20abca73d361a1c32407472b72b9ce5adbadca0eb61bfb16df35cca6cb1",
+      "sourcePath": "frontend/public/assets/redesign-v2/web/avatar-guardian-192.webp"
+    }
+  ],
+  "font": {
+    "family": "ChillReunion",
+    "variant": "Round",
+    "version": "2.700",
+    "weight": 500,
+    "path": "assets/fonts/ChillReunion-Round.woff2",
+    "sha256": "4f4e36dd0601c5fa325c6634649494767e9e7a0da8cc7b1fc9496ba1f7438288",
+    "license": "assets/fonts/OFL.txt",
+    "source": "https://github.com/Warren2060/ChillReunion/releases/tag/v2.700"
+  }
+}
